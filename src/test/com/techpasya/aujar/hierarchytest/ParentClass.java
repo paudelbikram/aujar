@@ -1,4 +1,4 @@
-package com.techpasya.test.packagetest;
+package com.techpasya.aujar.hierarchytest;
 
 public class ParentClass {
     public int number;

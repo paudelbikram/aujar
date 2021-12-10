@@ -1,21 +1,21 @@
-package com.techpasya.simplify4j;
+package com.techpasya.aujar;
 
-public class Simplify4JException extends Exception{
+public class AujarException extends Exception{
 
 
-    public Simplify4JException(){
+    public AujarException(){
         super();
     }
 
-    public Simplify4JException(String errorMessage){
+    public AujarException(String errorMessage){
         super(errorMessage);
     }
 
-    public Simplify4JException(Throwable cause){
+    public AujarException(Throwable cause){
         super(cause);
     }
 
-    public Simplify4JException(String errorMessage, Throwable cause){
+    public AujarException(String errorMessage, Throwable cause){
         super(errorMessage, cause);
     }
 
