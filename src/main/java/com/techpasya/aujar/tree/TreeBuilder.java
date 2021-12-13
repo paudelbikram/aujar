@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class TreeBuilder {
 
@@ -21,6 +22,8 @@ public class TreeBuilder {
         if (Files.exists(downloadDir)){
             throw new FileNotFoundException("Download Directory Does not exists");
         }
+        List<ClassComponent> nextClassComponents = classComponent.getAllTheClassComponents();
+        final int size = nextClassComponents.size();
         throw new NotImplementedException();
     }
 

@@ -1,5 +1,8 @@
 package com.techpasya.aujar.util;
 
+import sun.reflect.generics.reflectiveObjects.TypeVariableImpl;
+import sun.reflect.generics.reflectiveObjects.WildcardTypeImpl;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -37,7 +40,17 @@ public final class AujarUtil {
                 Type rawType = parameterizedType.getRawType();
                 Type ownerType = parameterizedType.getOwnerType();
                 for (Type typeArgument: typeArguments){
-                    fieldClasses.add((Class<?>)typeArgument);
+                    if (typeArgument instanceof WildcardTypeImpl) {
+                        Type[] upperBoundsTypes = ((WildcardTypeImpl) typeArgument).getUpperBounds();
+                        for (Type upperBoundType : upperBoundsTypes){
+                            fieldClasses.add((Class<?>)upperBoundType);
+                        }
+                    } else if (typeArgument instanceof TypeVariableImpl){
+                        //These are like K, V and bounds to super class Object
+                        continue;
+                    } else {
+                        fieldClasses.add((Class<?>)typeArgument);
+                    }
                 }
                 if (rawType != null){
                     fieldClasses.add((Class<?>)rawType);
