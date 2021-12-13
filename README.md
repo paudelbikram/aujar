@@ -7,7 +7,7 @@ classes in the projects.
 ## Why aujar ?
 Aujar means tool. So, it is a tool that helps you look deeper inside any java projects. 
 * aujar gives you the only classes that you care about and does not include any other classes outside of boundary package path. 
-* aujar gives you a ClassComponent Object which will be the root of your tree graph. Since you have access to whole graph tree, you can do whatever you like with it.
+* aujar gives you a ClassComponent Object which will be the root of your tree graph. Since you have access to the whole tree graph, you can do whatever you like with it.
 * aujar can also get your tree graph in JSON format.
 * aujar is lightweight and has no external dependencies. 
 
