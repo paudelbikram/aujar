@@ -15,7 +15,7 @@ Aujar means tool. So, it is a tool that helps you look deeper inside any java pr
 You only need two classes to get the tree graph; Aujar and ClassComponent. 
 For example, we are going to be running aujar with open source work scheduling library called quartz (version: 2.3.2). You can get the quartz library from
 maven central [here](https://mvnrepository.com/artifact/org.quartz-scheduler/quartz).
-Here we are going to be looking at class JobBuilder from org.quartz.JobBuilder path. We want also want to limit
+Here we are going to be looking at class JobBuilder from org.quartz.JobBuilder path. We also want to limit
 our search to package path org.quartz.
 
 ```java
