@@ -1,157 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1890px" height="1890px">
   <g>
-    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in
-      green
-    </text>
-    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple;
-      and CONTAINS are in orange
-    </text>
+    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
+    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
-  <path
-    id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS"
-    d="M1070.0,650.0 Q185.71428571428572,173.33333333333334 230.0,650.0" fill="none"
-    stroke="#f032e6" stroke-width="6"/>
-  <text font-size="35px" fill="#f032e6" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <path
-    id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS"
-    d="M1070.0,650.0 Q215.7142857142857,267.5055229744388 439.9999999999998,286.2693304105358"
-    fill="none" stroke="#f58231" stroke-width="6"/>
-  <text font-size="35px" fill="#f58231" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <path
-    id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS"
-    d="M1070.0,650.0 Q386.0,267.5055229744388 860.0,286.2693304105358" fill="none" stroke="#f58231"
-    stroke-width="6"/>
-  <text font-size="35px" fill="#f58231" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <path
-    id="class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS"
-    d="M439.9999999999998,286.2693304105358 Q259.99999999999994,260.0 860.0,1013.7306695894642"
-    fill="none" stroke="#f032e6" stroke-width="6"/>
-  <text font-size="35px" fill="#f032e6" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <path
-    id="class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS"
-    d="M860.0,286.2693304105358 Q185.71428571428572,173.33333333333334 440.0000000000001,1013.7306695894642"
-    fill="none" stroke="purple" stroke-width="6"/>
-  <text font-size="35px" fill="purple" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <g>
-    <circle cx="1070.0" cy="650.0" r="70" fill="#74c365" stroke="black" stroke-width="3"/>
+  <path id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS" d="M1070.0,650.0 Q482.5,415.93266739736606 860.0,1013.7306695894642" fill="none" stroke="#f032e6" stroke-width="6" />
+<text font-size="35px" fill="#f032e6" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ParentClassEXTENDS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS" d="M1070.0,650.0 Q377.5,277.2884449315774 440.0000000000001,1013.7306695894642" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ConcreteClassCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS" d="M1070.0,650.0 Q301.99999999999994,234.06733260263394 439.9999999999998,286.2693304105358" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ChildClassclass com.techpasya.aujar.hierarchytest.ImplementationClassCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS" d="M440.0000000000001,1013.7306695894642 Q167.50000000000003,237.67580994135204 230.0,650.0" fill="none" stroke="#f032e6" stroke-width="6" />
+<text font-size="35px" fill="#f032e6" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ConcreteClassclass com.techpasya.aujar.hierarchytest.AbstractClassEXTENDS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS" d="M439.9999999999998,286.2693304105358 Q324.99999999999994,95.42311013684527 860.0,286.2693304105358" fill="none" stroke="purple" stroke-width="6" />
+<text font-size="35px" fill="purple" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.hierarchytest.ImplementationClassinterface com.techpasya.aujar.hierarchytest.InterfaceClassIMPLEMENTS" startOffset="70%" >➤</textPath>
+ </text>  <g>
+    <circle cx="1070.0" cy="650.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="1070.0" y="655.0" font-size="20" fill="black" text-anchor="middle">ChildClass</text>
   </g>
   <g>
-    <circle cx="860.0" cy="1013.7306695894642" r="70" fill="#74c365" stroke="black"
-      stroke-width="3"/>
-    <text x="860.0" y="1018.7306695894642" font-size="20" fill="black" text-anchor="middle">
-      AbstractClass
-    </text>
+    <circle cx="860.0" cy="1013.7306695894642" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="860.0" y="1018.7306695894642" font-size="20" fill="black" text-anchor="middle">ParentClass</text>
   </g>
   <g>
-    <circle cx="440.0000000000001" cy="1013.7306695894642" r="70" fill="#6699cc" stroke="black"
-      stroke-width="3"/>
-    <text x="440.0000000000001" y="1018.7306695894642" font-size="20" fill="black"
-      text-anchor="middle">InterfaceClass
-    </text>
+    <circle cx="440.0000000000001" cy="1013.7306695894642" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="440.0000000000001" y="1018.7306695894642" font-size="20" fill="black" text-anchor="middle">ConcreteClass</text>
   </g>
   <g>
-    <circle cx="230.0" cy="650.0" r="70" fill="#74c365" stroke="black" stroke-width="3"/>
-    <text x="230.0" y="655.0" font-size="20" fill="black" text-anchor="middle">ParentClass</text>
+    <circle cx="230.0" cy="650.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="230.0" y="655.0" font-size="20" fill="black" text-anchor="middle">AbstractClass</text>
   </g>
   <g>
-    <circle cx="439.9999999999998" cy="286.2693304105358" r="70" fill="#74c365" stroke="black"
-      stroke-width="3"/>
-    <text x="439.9999999999998" y="291.2693304105358" font-size="20" fill="black"
-      text-anchor="middle">ConcreteClass
-    </text>
+    <circle cx="439.9999999999998" cy="286.2693304105358" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="439.9999999999998" y="291.2693304105358" font-size="20" fill="black" text-anchor="middle">ImplementationClass</text>
   </g>
   <g>
-    <circle cx="860.0" cy="286.2693304105358" r="70" fill="#74c365" stroke="black"
-      stroke-width="3"/>
-    <text x="860.0" y="291.2693304105358" font-size="20" fill="black" text-anchor="middle">
-      ImplementationClass
-    </text>
+    <circle cx="860.0" cy="286.2693304105358" r="70" fill="#6699cc" stroke="black" stroke-width="3" />
+    <text x="860.0" y="291.2693304105358" font-size="20" fill="black" text-anchor="middle">InterfaceClass</text>
   </g>
 
 </svg>

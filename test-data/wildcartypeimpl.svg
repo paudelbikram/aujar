@@ -1,43 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="630px" height="630px">
   <g>
-    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in
-      green
-    </text>
-    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple;
-      and CONTAINS are in orange
-    </text>
+    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
+    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
-  <path
-    id="class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS"
-    d="M110.0,250.00000000000003 Q71.42857142857143,100.0 390.0,250.0" fill="none" stroke="#f58231"
-    stroke-width="6"/>
-  <text font-size="35px" fill="#f58231" dominant-baseline="central">
-    <textPath
-      href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS"
-      startOffset="10%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS"
-      startOffset="30%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS"
-      startOffset="50%">➤
-    </textPath>
-    <textPath
-      href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS"
-      startOffset="70%">➤
-    </textPath>
-  </text>
-  <g>
-    <circle cx="390.0" cy="250.0" r="70" fill="#74c365" stroke="black" stroke-width="3"/>
-    <text x="390.0" y="255.0" font-size="20" fill="black" text-anchor="middle">Animal</text>
+  <path id="class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS" d="M390.0,250.0 Q125.0,71.42857142857143 110.0,250.00000000000003" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class com.techpasya.aujar.wildcardtypeimpltest.Zooclass com.techpasya.aujar.wildcardtypeimpltest.AnimalCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <g>
+    <circle cx="390.0" cy="250.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="390.0" y="255.0" font-size="20" fill="black" text-anchor="middle">Zoo</text>
   </g>
   <g>
-    <circle cx="110.0" cy="250.00000000000003" r="70" fill="#74c365" stroke="black"
-      stroke-width="3"/>
-    <text x="110.0" y="255.00000000000003" font-size="20" fill="black" text-anchor="middle">Zoo
-    </text>
+    <circle cx="110.0" cy="250.00000000000003" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="110.0" y="255.00000000000003" font-size="20" fill="black" text-anchor="middle">Animal</text>
   </g>
 
 </svg>
