@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="945px" height="945px">
+  <g>
+    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in
+      green
+    </text>
+    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple;
+      and CONTAINS are in orange
+    </text>
+  </g>
+  <path
+    id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS"
+    d="M245.00000000000006,531.8653347947321 Q139.99999999999997,200.0 244.9999999999999,168.1346652052679"
+    fill="none" stroke="#f58231" stroke-width="6"/>
+  <text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS"
+      startOffset="10%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS"
+      startOffset="30%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS"
+      startOffset="50%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS"
+      startOffset="70%">➤
+    </textPath>
+  </text>
+  <path
+    id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS"
+    d="M245.00000000000006,531.8653347947321 Q107.33333333333333,176.37306695894642 560.0,350.0"
+    fill="none" stroke="#f58231" stroke-width="6"/>
+  <text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS"
+      startOffset="10%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS"
+      startOffset="30%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS"
+      startOffset="50%">➤
+    </textPath>
+    <textPath
+      href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS"
+      startOffset="70%">➤
+    </textPath>
+  </text>
+  <g>
+    <circle cx="560.0" cy="350.0" r="70" fill="#74c365" stroke="black" stroke-width="3"/>
+    <text x="560.0" y="355.0" font-size="20" fill="black" text-anchor="middle">ClassZ</text>
+  </g>
+  <g>
+    <circle cx="245.00000000000006" cy="531.8653347947321" r="70" fill="#74c365" stroke="black"
+      stroke-width="3"/>
+    <text x="245.00000000000006" y="536.8653347947321" font-size="20" fill="black"
+      text-anchor="middle">ClassWithGenericField
+    </text>
+  </g>
+  <g>
+    <circle cx="244.9999999999999" cy="168.1346652052679" r="70" fill="#74c365" stroke="black"
+      stroke-width="3"/>
+    <text x="244.9999999999999" y="173.1346652052679" font-size="20" fill="black"
+      text-anchor="middle">ClassY
+    </text>
+  </g>
+
+</svg>

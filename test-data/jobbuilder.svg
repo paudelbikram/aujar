@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2205px" height="2205px">
+  <g>
+    <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
+    <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
+  </g>
+  <path id="class org.quartz.JobBuilderclass org.quartz.JobKeyCONTAINS" d="M1055.5100029107793,1133.0974264093347 Q341.0088144096485,334.09887884834626 308.5252547278146,537.3969678323965" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobKeyCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobKeyCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobKeyCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobKeyCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class org.quartz.JobBuilderinterface org.quartz.JobCONTAINS" d="M1055.5100029107793,1133.0974264093347 Q339.29494905443704,281.07654988804825 640.9647423614058,272.28532303090645" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class org.quartz.JobBuilderinterface org.quartz.JobCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderinterface org.quartz.JobCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderinterface org.quartz.JobCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderinterface org.quartz.JobCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class org.quartz.JobBuilderclass org.quartz.JobDataMapCONTAINS" d="M1055.5100029107793,1133.0974264093347 Q341.0088144096485,419.14009171538765 308.5252547278147,962.6030321676035" fill="none" stroke="#f58231" stroke-width="6" />
+<text font-size="35px" fill="#f58231" dominant-baseline="central">
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobDataMapCONTAINS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobDataMapCONTAINS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobDataMapCONTAINS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.JobBuilderclass org.quartz.JobDataMapCONTAINS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class org.quartz.JobDataMapclass org.quartz.utils.StringKeyDirtyFlagMapEXTENDS" d="M308.5252547278147,962.6030321676035 Q341.0088144096485,265.90112115165374 1055.5100029107793,366.9025735906653" fill="none" stroke="#f032e6" stroke-width="6" />
+<text font-size="35px" fill="#f032e6" dominant-baseline="central">
+    <textPath href="#class org.quartz.JobDataMapclass org.quartz.utils.StringKeyDirtyFlagMapEXTENDS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.JobDataMapclass org.quartz.utils.StringKeyDirtyFlagMapEXTENDS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.JobDataMapclass org.quartz.utils.StringKeyDirtyFlagMapEXTENDS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.JobDataMapclass org.quartz.utils.StringKeyDirtyFlagMapEXTENDS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class org.quartz.JobKeyclass org.quartz.utils.KeyEXTENDS" d="M308.5252547278146,537.3969678323965 Q135.64142815560294,294.1852741335817 640.964742361406,1227.7146769690935" fill="none" stroke="#f032e6" stroke-width="6" />
+<text font-size="35px" fill="#f032e6" dominant-baseline="central">
+    <textPath href="#class org.quartz.JobKeyclass org.quartz.utils.KeyEXTENDS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.JobKeyclass org.quartz.utils.KeyEXTENDS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.JobKeyclass org.quartz.utils.KeyEXTENDS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.JobKeyclass org.quartz.utils.KeyEXTENDS" startOffset="70%" >➤</textPath>
+ </text>  <path id="class org.quartz.utils.StringKeyDirtyFlagMapclass org.quartz.utils.DirtyFlagMapEXTENDS" d="M1055.5100029107793,366.9025735906653 Q573.8775007276948,186.15042893177755 1240.0,750.0" fill="none" stroke="#f032e6" stroke-width="6" />
+<text font-size="35px" fill="#f032e6" dominant-baseline="central">
+    <textPath href="#class org.quartz.utils.StringKeyDirtyFlagMapclass org.quartz.utils.DirtyFlagMapEXTENDS" startOffset="10%" >➤</textPath>
+    <textPath href="#class org.quartz.utils.StringKeyDirtyFlagMapclass org.quartz.utils.DirtyFlagMapEXTENDS" startOffset="30%" >➤</textPath>
+    <textPath href="#class org.quartz.utils.StringKeyDirtyFlagMapclass org.quartz.utils.DirtyFlagMapEXTENDS" startOffset="50%" >➤</textPath>
+    <textPath href="#class org.quartz.utils.StringKeyDirtyFlagMapclass org.quartz.utils.DirtyFlagMapEXTENDS" startOffset="70%" >➤</textPath>
+ </text>  <g>
+    <circle cx="1240.0" cy="750.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="1240.0" y="755.0" font-size="20" fill="black" text-anchor="middle">DirtyFlagMap</text>
+  </g>
+  <g>
+    <circle cx="1055.5100029107793" cy="1133.0974264093347" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="1055.5100029107793" y="1138.0974264093347" font-size="20" fill="black" text-anchor="middle">JobBuilder</text>
+  </g>
+  <g>
+    <circle cx="640.964742361406" cy="1227.7146769690935" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="640.964742361406" y="1232.7146769690935" font-size="20" fill="black" text-anchor="middle">Key</text>
+  </g>
+  <g>
+    <circle cx="308.5252547278147" cy="962.6030321676035" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="308.5252547278147" y="967.6030321676035" font-size="20" fill="black" text-anchor="middle">JobDataMap</text>
+  </g>
+  <g>
+    <circle cx="308.5252547278146" cy="537.3969678323965" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="308.5252547278146" y="542.3969678323965" font-size="20" fill="black" text-anchor="middle">JobKey</text>
+  </g>
+  <g>
+    <circle cx="640.9647423614058" cy="272.28532303090645" r="70" fill="#6699cc" stroke="black" stroke-width="3" />
+    <text x="640.9647423614058" y="277.28532303090645" font-size="20" fill="black" text-anchor="middle">Job</text>
+  </g>
+  <g>
+    <circle cx="1055.5100029107793" cy="366.9025735906653" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <text x="1055.5100029107793" y="371.9025735906653" font-size="20" fill="black" text-anchor="middle">StringKeyDirtyFlagMap</text>
+  </g>
+
+</svg>
