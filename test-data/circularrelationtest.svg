@@ -1,16 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="315px" height="315px">
-  <g>
+<svg xmlns="http://www.w3.org/2000/svg" width="500px" height="500px">
+<defs>
+<style type="text\/css"><![CDATA[
+  .classcontainer { cursor: pointer; }]]></style>
+</defs>  <g>
     <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
     <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
-  <path id="class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" d="M150.0,150.0 Q110.0,42.857142857142854 290.0,150.0" fill="none" stroke="#f58231" stroke-width="6" />
-<text font-size="35px" fill="#f58231" dominant-baseline="central">
-    <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="10%" >➤</textPath>
-    <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="30%" >➤</textPath>
-    <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="50%" >➤</textPath>
-    <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="70%" >➤</textPath>
- </text>  <g>
-    <circle cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+  <path id="class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" d="M150.0,150.0 Q62.857142857142854,60.0 290.0,150.0" fill="none" stroke="#f58231" stroke-width="6" />
+ <text font-size="35px" fill="#f58231" dominant-baseline="central">
+  <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="10%" >▶</textPath>
+  <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="30%" >▶</textPath>
+  <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="60%" >▶</textPath>
+  <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="80%" >▶</textPath>
+  <textPath href="#class com.techpasya.aujar.circularrelationtest.Cityclass com.techpasya.aujar.circularrelationtest.CityCONTAINS" startOffset="95%" >▶</textPath>
+ </text>
+  <g>
+    <circle class="classcontainer"  cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="220.0" y="155.0" font-size="20" fill="black" text-anchor="middle">City</text>
   </g>
 

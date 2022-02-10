@@ -5,11 +5,15 @@ import com.techpasya.aujar.graph.AjGraph;
 import com.techpasya.aujar.graph.EdgeType;
 import com.techpasya.aujar.model.ClassComponent;
 import java.lang.reflect.Field;
+import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl;
+import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 import sun.reflect.generics.reflectiveObjects.TypeVariableImpl;
 import sun.reflect.generics.reflectiveObjects.WildcardTypeImpl;
 
@@ -31,6 +35,80 @@ public final class AujarUtil {
   }
 
 
+  private static void addGenericTypes(List<Class<?>> fieldClasses, final Type genericType) {
+    if (genericType instanceof  WildcardTypeImpl) {
+      //These are like ? wildcards might have upperbounds
+      Type[] upperBoundsTypes = ((WildcardTypeImpl) genericType)
+              .getUpperBounds();
+      for (Type upperBoundType : upperBoundsTypes) {
+        if (upperBoundType instanceof Class<?>) {
+          fieldClasses.add((Class<?>) upperBoundType);
+        } else {
+          addGenericTypes(fieldClasses, upperBoundType);
+        }
+      }
+
+      Type[] lowerBounds = ((WildcardTypeImpl) genericType)
+              .getLowerBounds();
+      for (Type lowerBound : lowerBounds) {
+        if (lowerBound instanceof Class<?>) {
+          fieldClasses.add((Class<?>) lowerBound);
+        } else {
+          addGenericTypes(fieldClasses, lowerBound);
+        }
+      }
+    } else if (genericType instanceof TypeVariableImpl) {
+      for (Type type : ((TypeVariableImpl) genericType).getBounds()) {
+        if (type instanceof  Class<?>) {
+          fieldClasses.add((Class<?>) type);
+        } else {
+          addGenericTypes(fieldClasses, type);
+        }
+      }
+      //These are like K, V and bounds to super class Object
+    } else if (genericType instanceof  ParameterizedTypeImpl) {
+      ParameterizedType parameterizedType = (ParameterizedType) genericType;
+      Type[] typeArguments = parameterizedType.getActualTypeArguments();
+      Type rawType = parameterizedType.getRawType();
+      Type ownerType = parameterizedType.getOwnerType();
+
+      if (rawType != null) {
+        if (rawType instanceof Class<?>) {
+          fieldClasses.add((Class<?>) rawType);
+        } else {
+          addGenericTypes(fieldClasses, rawType);
+        }
+      }
+      if (ownerType != null) {
+        if (ownerType instanceof Class<?>) {
+          fieldClasses.add((Class<?>) ownerType);
+        } else {
+          addGenericTypes(fieldClasses, ownerType);
+        }
+      }
+
+      for (Type typeArgument : typeArguments) {
+        if (typeArgument instanceof Class<?>) {
+          fieldClasses.add((Class<?>) typeArgument);
+        } else {
+          addGenericTypes(fieldClasses, typeArgument);
+        }
+      }
+    } else if (genericType instanceof GenericArrayTypeImpl) {
+      Type type = ((GenericArrayType) genericType).getGenericComponentType();
+      if (type instanceof Class<?>) {
+        fieldClasses.add((Class<?>) type);
+      } else {
+        addGenericTypes(fieldClasses, type);
+      }
+    } else if (genericType instanceof  Class<?>) {
+      fieldClasses.add((Class<?>) genericType);
+    } else {
+      System.err.println("Found UnExpected Types");
+    }
+  }
+
+
   public static List<Class<?>> getFieldClasses(final Class<?> cls) {
     if (cls == null) {
       throw new IllegalArgumentException("Class can not be null");
@@ -44,31 +122,8 @@ public final class AujarUtil {
       final Type genericType = field.getGenericType();
       if (genericType instanceof Class<?>) {
         fieldClasses.add(field.getType());
-      } else if (genericType instanceof ParameterizedType) {
-        ParameterizedType parameterizedType = (ParameterizedType) genericType;
-        Type[] typeArguments = parameterizedType.getActualTypeArguments();
-        Type rawType = parameterizedType.getRawType();
-        Type ownerType = parameterizedType.getOwnerType();
-        for (Type typeArgument : typeArguments) {
-          if (typeArgument instanceof WildcardTypeImpl) {
-            Type[] upperBoundsTypes = ((WildcardTypeImpl) typeArgument)
-                .getUpperBounds();
-            for (Type upperBoundType : upperBoundsTypes) {
-              fieldClasses.add((Class<?>) upperBoundType);
-            }
-          } else if (typeArgument instanceof TypeVariableImpl) {
-            //These are like K, V and bounds to super class Object
-            continue;
-          } else {
-            fieldClasses.add((Class<?>) typeArgument);
-          }
-        }
-        if (rawType != null) {
-          fieldClasses.add((Class<?>) rawType);
-        }
-        if (ownerType != null) {
-          fieldClasses.add((Class<?>) ownerType);
-        }
+      } else {
+        addGenericTypes(fieldClasses, genericType);
       }
     }
     return fieldClasses;

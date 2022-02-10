@@ -1,10 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="315px" height="315px">
-  <g>
+<svg xmlns="http://www.w3.org/2000/svg" width="500px" height="500px">
+<defs>
+<style type="text\/css"><![CDATA[
+  .classcontainer { cursor: pointer; }]]></style>
+</defs>  <g>
     <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
     <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
   <g>
-    <circle cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <circle class="classcontainer"  cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="220.0" y="155.0" font-size="20" fill="black" text-anchor="middle">Storage</text>
   </g>
 

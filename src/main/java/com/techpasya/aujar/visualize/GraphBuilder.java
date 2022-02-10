@@ -18,6 +18,12 @@ public class GraphBuilder {
 
   private static final String STARTING_DIAGRAM =
       "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{width}px\" height=\"{height}px\">\n"
+          +"<defs>\n"
+          +"<style type=\"text\\/css\"><![CDATA[\n"
+          +"  .classcontainer { cursor: pointer; }"
+
+          +"]]></style>\n"
+          +"</defs>"
           + "  <g>\n"
           + "    <text x=\"20\" y=\"20\" fill=\"black\" font-size=\"12\">INTERFACES are in blue; and OTHERS are in green</text>\n"
           + "    <text x=\"20\" y=\"40\" fill=\"black\" font-size=\"12\">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>\n"
@@ -25,21 +31,30 @@ public class GraphBuilder {
 
   private static final String INTERFACE_COLOR = "#6699cc";
   private static final String NON_INTERFACE_COLOR = "#74c365";
+  private static final String CONTAINS_ARROW = "▶";
+  private static final String NON_CONTAINS_ARROW = "▷";
+  private static final int MIN_WIDTH = 500;
+  private static final int MIN_HEIGHT = 500;
 
   private static final String CLASS_DIAGRAM = "  <g>\n"
-      + "    <circle cx=\"{cx}\" cy=\"{cy}\" r=\"{r}\" fill=\"{color}\" stroke=\"black\" stroke-width=\"3\" />\n"
+      + "    <circle class=\"classcontainer\"  cx=\"{cx}\" cy=\"{cy}\" r=\"{r}\" fill=\"{color}\" stroke=\"black\" stroke-width=\"3\" />\n"
       + "    <text x=\"{cx}\" y=\"{cyt}\" font-size=\"20\" fill=\"black\" text-anchor=\"middle\">{className}</text>\n"
       + "  </g>\n";
 
-  private static final String ARROW_IN_PATH =
-      "<text font-size=\"35px\" fill=\"{color}\" dominant-baseline=\"central\">\n"
-          + "    <textPath href=\"#{id}\" startOffset=\"10%\" >➤</textPath>\n"
-          + "    <textPath href=\"#{id}\" startOffset=\"30%\" >➤</textPath>\n"
-          + "    <textPath href=\"#{id}\" startOffset=\"50%\" >➤</textPath>\n"
-          + "    <textPath href=\"#{id}\" startOffset=\"70%\" >➤</textPath>\n"
-          + " </text>";
 
-  private static final String PATH = "  <path id=\"{id}\" d=\"M{xs},{ys} Q{xc},{yc} {xe},{ye}\" fill=\"none\" stroke=\"{color}\" stroke-width=\"6\" />\n";
+
+  private static final String ARROW_IN_PATH =
+      " <text font-size=\"35px\" fill=\"{color}\" dominant-baseline=\"central\">\n"
+          + "  <textPath href=\"#{id}\" startOffset=\"10%\" >{arrowhead}</textPath>\n"
+          + "  <textPath href=\"#{id}\" startOffset=\"30%\" >{arrowhead}</textPath>\n"
+          + "  <textPath href=\"#{id}\" startOffset=\"60%\" >{arrowhead}</textPath>\n"
+          + "  <textPath href=\"#{id}\" startOffset=\"80%\" >{arrowhead}</textPath>\n"
+          + "  <textPath href=\"#{id}\" startOffset=\"95%\" >{arrowhead}</textPath>\n"
+      + " </text>\n";
+
+  private static final String INTERFACE_PATH = "  <path stroke-dasharray=\"8, 8\" id=\"{id}\" d=\"M{xs},{ys} Q{xc},{yc} {xe},{ye}\" fill=\"none\" stroke=\"{color}\" stroke-width=\"6\" />\n";
+
+  private static final String NON_INTERFACE_PATH = "  <path id=\"{id}\" d=\"M{xs},{ys} Q{xc},{yc} {xe},{ye}\" fill=\"none\" stroke=\"{color}\" stroke-width=\"6\" />\n";
 
   private static final String CONTAINS_COLOR = "#f58231";
   private static final String EXTENDS_COLOR = "#f032e6";
@@ -69,8 +84,8 @@ public class GraphBuilder {
     Map<Class<?>, Point> classInSvg = linkClassToPoint(keySet, points);
 
     final StringBuilder sb = new StringBuilder(STARTING_DIAGRAM.replace("{width}",
-        (noOfClasses * 315) + "").replace("{height}",
-        (noOfClasses * 315) + ""));
+        (Math.max((noOfClasses * 315), MIN_WIDTH)) + "").replace("{height}",
+        (Math.max((noOfClasses * 315), MIN_HEIGHT) + "")));
 
     //Drawing edges (relations)
     for (Map.Entry<Class<?>, Point> entry : classInSvg.entrySet()) {
@@ -89,8 +104,9 @@ public class GraphBuilder {
         final String edgeColor = getColorForPath(edge.getTypeOfRelation());
         final String id = edge.getSource().toString() + edge.getDestination().toString() + edge
             .getTypeOfRelation();
-
-        sb.append(PATH.replace("{xs}", startingPoint.getX() + "")
+        final String arrowHead = getArrowHead(edge.getTypeOfRelation());
+        final String path = edge.getTypeOfRelation().equals(EdgeType.IMPLEMENTS) ? INTERFACE_PATH : NON_INTERFACE_PATH;
+        sb.append(path.replace("{xs}", startingPoint.getX() + "")
             .replace("{ys}", startingPoint.getY() + "")
             .replace("{xc}",
                 ((startingPoint.getX() + endingPoint.getX()) / getRandomDivider()) + "")
@@ -101,7 +117,7 @@ public class GraphBuilder {
             .replace("{id}", id)
             .replace("{color}", edgeColor));
 
-        sb.append(ARROW_IN_PATH.replace("{id}", id).replace("{color}", edgeColor));
+        sb.append(ARROW_IN_PATH.replace("{id}", id).replace("{color}", edgeColor).replace("{arrowhead}", arrowHead));
       }
     }
 
@@ -152,6 +168,13 @@ public class GraphBuilder {
   }
 
 
+  private static String getArrowHead(EdgeType type) {
+    if (type.equals(EdgeType.CONTAINS)) {
+      return CONTAINS_ARROW;
+    } else {
+      return NON_CONTAINS_ARROW;
+    }
+  }
   /**
    *
    */

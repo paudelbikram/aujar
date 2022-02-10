@@ -1,16 +1,14 @@
 package com.techpasya.aujar;
 
+import com.techpasya.aujar.clazzloader.AujarClassLoader;
 import com.techpasya.aujar.graph.AjEdge;
 import com.techpasya.aujar.model.ClassComponent;
 import com.techpasya.aujar.model.SearchBoundary;
 import com.techpasya.aujar.util.AujarUtil;
 import com.techpasya.aujar.visualize.GraphBuilder;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Aujar {
@@ -39,11 +37,16 @@ public class Aujar {
       throws AujarException {
     Objects.requireNonNull(startingClassPath, "Starting Class Path is required");
     Objects.requireNonNull(boundaryPackagePath, "Boundary Package Path is required");
+    Class<?> rootClass = null;
     try {
-      final Class<?> rootClass = Class.forName(startingClassPath);
+      rootClass = Class.forName(startingClassPath);
       return new Aujar(rootClass, new SearchBoundary(boundaryPackagePath));
     } catch (ClassNotFoundException e) {
-      throw new AujarException("Starting Class Path can not be found", e);
+      rootClass = AujarClassLoader.classesSuccessfullyLoaded.get(startingClassPath);
+      if (rootClass != null) {
+        return new Aujar(rootClass, new SearchBoundary(boundaryPackagePath));
+      }
+      throw new AujarException("Starting Class Path can not be found");
     }
   }
 
@@ -104,20 +107,25 @@ public class Aujar {
     classComponent.setClassImplements(getClassComponents(AujarUtil.getAllInterfaces(cls)));
     classComponent.setClassInherits(getClassComponent(AujarUtil.getSuperclasse(cls)));
     classComponent.setClassContains(getClassComponents(AujarUtil.getFieldClasses(cls)));
-    classComponentContainers.put(cls, classComponent);
     return classComponent;
   }
 
-
+  //DFS
   private void recursiveBuild(ClassComponent classComponent) {
-    List<ClassComponent> associatedClassComponents = classComponent.getAllTheClassComponents();
-    for (ClassComponent clsComponent : associatedClassComponents) {
-      if (classComponentContainers.containsKey(clsComponent.getClazz())) {
-        continue;
-      }
-      Class<?> clz = clsComponent.getClazz();
-      clsComponent.copyMembers(initializeClassComponent(clz));
-      recursiveBuild(clsComponent);
+    Stack<ClassComponent> stack = new Stack<>();
+    stack.add(classComponent);
+
+    while (!stack.isEmpty()) {
+      ClassComponent currentClassComponent = stack.pop();
+
+      Class<?> clz = currentClassComponent.getClazz();
+      currentClassComponent.copyMembers(initializeClassComponent(clz));
+      classComponentContainers.put(clz, currentClassComponent);
+      currentClassComponent.getAllTheClassComponents().forEach(c -> {
+        if (!classComponentContainers.containsKey(c.getClazz())) {
+          stack.push(c);
+        }
+      });
     }
   }
 
@@ -128,10 +136,6 @@ public class Aujar {
     }
     if (!searchBoundary.isFromThePackage(cls.getPackage().getName())) {
       return null;
-    }
-    ClassComponent classComponent = classComponentContainers.get(cls);
-    if (classComponent != null) {
-      return classComponent;
     }
     return new ClassComponent(cls);
   }
