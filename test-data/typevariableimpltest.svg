@@ -1,14 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500px" height="500px">
-<defs>
-<style type="text\/css"><![CDATA[
-  .classcontainer { cursor: pointer; }]]></style>
-</defs>  <g>
+<script>
+ window.addEventListener('DOMContentLoaded', () => {
+   function showTip (id) {
+     console.log(id);     document.getElementById(id.baseVal).style.display = "block";
+   }
+   function hideTip(id) {
+     console.log(id);     document.getElementById(id.baseVal).style.display = "none";
+   }
+   document.querySelectorAll('circle').forEach( (c) => {
+     c.addEventListener('mouseover', (x) => {
+       showTip(c.className);
+     })
+     c.addEventListener('mouseout', (x) => {
+       console.log(c);       hideTip(c.className);
+     })
+   })
+ })
+</script>  <g>
     <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
     <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
   <g>
-    <circle class="classcontainer"  cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <circle class="com.techpasya.aujar.typevariableimpltest.Storage"  cx="220.0" cy="150.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="220.0" y="155.0" font-size="20" fill="black" text-anchor="middle">Storage</text>
   </g>
-
+<g>
+  <text id="com.techpasya.aujar.typevariableimpltest.Storage" x="290.0" y="115.0" display="none" >
+   <tspan x="290.0" dy="1.2em" fill="red" font-size="40px">com.techpasya.aujar.typevariableimpltest.Storage</tspan>
+   <tspan x="290.0" dy="1.2em" font-size="35px">IMPLEMENTS : classes</tspan>
+   <tspan x="290.0" dy="1.2em" font-size="35px">EXTENDS : classes</tspan>
+   <tspan x="290.0" dy="1.2em" font-size="35px">CONTAINS : classes</tspan>
+  </text>
+ </g>
 </svg>

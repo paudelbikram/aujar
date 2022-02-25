@@ -4,5 +4,5 @@ import java.util.HashMap;
 
 public class Storage<V> {
 
-  private HashMap<Long, V> containers = new HashMap<Long, V>();
+    private HashMap<Long, V> containers = new HashMap<Long, V>();
 }

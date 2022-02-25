@@ -4,6 +4,6 @@ import java.util.HashMap;
 
 public class ClassWithGenericField {
 
-  private HashMap<ClassY, ClassZ> stringClassYMap;
+    private HashMap<ClassY, ClassZ> stringClassYMap;
 
 }

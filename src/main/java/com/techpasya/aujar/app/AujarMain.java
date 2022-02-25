@@ -2,6 +2,7 @@ package com.techpasya.aujar.app;
 
 import com.techpasya.aujar.Aujar;
 import com.techpasya.aujar.clazzloader.AujarClassLoader;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +20,7 @@ public class AujarMain {
             final String targetClass = args[2];
             final String outputSvg = args.length == 4 ? args[3] : null;
             Aujar aujar = Aujar.build(targetClass, boundaryPath);
-            aujar.save(outputSvg != null ? outputSvg :  System.getProperty("user.dir") + File.separator + "graph.svg");
+            aujar.save(outputSvg != null ? outputSvg : System.getProperty("user.dir") + File.separator + "graph.svg");
         } catch (Exception e) {
             e.printStackTrace();
             exitWithHelp();
@@ -56,7 +57,6 @@ public class AujarMain {
             }
         }
     }
-
 
 
     private static void exitWithHelp() {

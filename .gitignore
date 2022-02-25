@@ -100,3 +100,12 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+
+# All idea
+.idea/*
+
+# All DS Store
+.DS_Store
+
+# All Target
+target/*

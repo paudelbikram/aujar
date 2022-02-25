@@ -2,7 +2,7 @@ package com.techpasya.aujar.hierarchytest;
 
 public interface InterfaceClass {
 
-  void overrideMe();
+    void overrideMe();
 
-  String whatDoIsay(final String s);
+    String whatDoIsay(final String s);
 }

@@ -26,30 +26,30 @@ public class AujarClassLoader {
             loadClassesFromJarFile(providedPath.toString());
         }
         if (!classesFailedToLoad.isEmpty()) {
-            throw new AujarException("Following classes not found "+ Arrays.toString(classesFailedToLoad.toArray()));
+            throw new AujarException("Following classes not found " + Arrays.toString(classesFailedToLoad.toArray()));
         }
     }
 
     private void loadClassesFromFolder(final Path folderPath) {
         try (Stream<Path> paths = Files.walk(folderPath)) {
             paths.filter(Files::isRegularFile)
-            .filter(p -> p.getFileName().endsWith(".jar"))
-            .forEach(p ->loadClassesFromJarFile(p.toString()));
+                    .filter(p -> p.getFileName().endsWith(".jar"))
+                    .forEach(p -> loadClassesFromJarFile(p.toString()));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
-    public void loadClassesFromJarFile(final String jarFilePath)  {
+    public void loadClassesFromJarFile(final String jarFilePath) {
         try {
             JarFile jarFile = new JarFile(jarFilePath);
             Enumeration<JarEntry> e = jarFile.entries();
-            URL[] urls = new URL[]{ new URL("jar:file:" + jarFilePath+"!/") };
+            URL[] urls = new URL[]{new URL("jar:file:" + jarFilePath + "!/")};
             URLClassLoader cl = URLClassLoader.newInstance(urls);
             while (e.hasMoreElements()) {
                 JarEntry je = e.nextElement();
-                if((!je.isDirectory()) && je.getName().endsWith(".class")){
+                if ((!je.isDirectory()) && je.getName().endsWith(".class")) {
                     String className = je.getName()
                             .replace("/", ".")
                             .replace(".class", "");

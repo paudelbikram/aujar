@@ -1,12 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="945px" height="945px">
-<defs>
-<style type="text\/css"><![CDATA[
-  .classcontainer { cursor: pointer; }]]></style>
-</defs>  <g>
+<script>
+ window.addEventListener('DOMContentLoaded', () => {
+   function showTip (id) {
+     console.log(id);     document.getElementById(id.baseVal).style.display = "block";
+   }
+   function hideTip(id) {
+     console.log(id);     document.getElementById(id.baseVal).style.display = "none";
+   }
+   document.querySelectorAll('circle').forEach( (c) => {
+     c.addEventListener('mouseover', (x) => {
+       showTip(c.className);
+     })
+     c.addEventListener('mouseout', (x) => {
+       console.log(c);       hideTip(c.className);
+     })
+   })
+ })
+</script>  <g>
     <text x="20" y="20" fill="black" font-size="12">INTERFACES are in blue; and OTHERS are in green</text>
     <text x="20" y="40" fill="black" font-size="12">EXTENDS are in pink; IMPLEMENTS are in purple; and CONTAINS are in orange</text>
   </g>
-  <path id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" d="M244.9999999999999,168.1346652052679 Q160.99999999999997,74.01923788646684 560.0,350.0" fill="none" stroke="#f58231" stroke-width="6" />
+  <path id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" d="M244.9999999999999,168.1346652052679 Q160.99999999999997,86.35577753421131 560.0,350.0" fill="none" stroke="#f58231" stroke-width="6" />
  <text font-size="35px" fill="#f58231" dominant-baseline="central">
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" startOffset="10%" >▶</textPath>
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" startOffset="30%" >▶</textPath>
@@ -14,7 +28,7 @@
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" startOffset="80%" >▶</textPath>
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassYCONTAINS" startOffset="95%" >▶</textPath>
  </text>
-  <path id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS" d="M244.9999999999999,168.1346652052679 Q122.49999999999999,100.0 245.00000000000006,531.8653347947321" fill="none" stroke="#f58231" stroke-width="6" />
+  <path id="class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS" d="M244.9999999999999,168.1346652052679 Q97.99999999999999,100.0 245.00000000000006,531.8653347947321" fill="none" stroke="#f58231" stroke-width="6" />
  <text font-size="35px" fill="#f58231" dominant-baseline="central">
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS" startOffset="10%" >▶</textPath>
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS" startOffset="30%" >▶</textPath>
@@ -23,16 +37,37 @@
   <textPath href="#class com.techpasya.aujar.genericfieldtest.ClassWithGenericFieldclass com.techpasya.aujar.genericfieldtest.ClassZCONTAINS" startOffset="95%" >▶</textPath>
  </text>
   <g>
-    <circle class="classcontainer"  cx="560.0" cy="350.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+    <circle class="com.techpasya.aujar.genericfieldtest.ClassY"  cx="560.0" cy="350.0" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="560.0" y="355.0" font-size="20" fill="black" text-anchor="middle">ClassY</text>
   </g>
-  <g>
-    <circle class="classcontainer"  cx="245.00000000000006" cy="531.8653347947321" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+<g>
+  <text id="com.techpasya.aujar.genericfieldtest.ClassY" x="630.0" y="315.0" display="none" >
+   <tspan x="630.0" dy="1.2em" fill="red" font-size="40px">com.techpasya.aujar.genericfieldtest.ClassY</tspan>
+   <tspan x="630.0" dy="1.2em" font-size="35px">IMPLEMENTS : classes</tspan>
+   <tspan x="630.0" dy="1.2em" font-size="35px">EXTENDS : classes</tspan>
+   <tspan x="630.0" dy="1.2em" font-size="35px">CONTAINS : classes</tspan>
+  </text>
+ </g>  <g>
+    <circle class="com.techpasya.aujar.genericfieldtest.ClassZ"  cx="245.00000000000006" cy="531.8653347947321" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="245.00000000000006" y="536.8653347947321" font-size="20" fill="black" text-anchor="middle">ClassZ</text>
   </g>
-  <g>
-    <circle class="classcontainer"  cx="244.9999999999999" cy="168.1346652052679" r="70" fill="#74c365" stroke="black" stroke-width="3" />
+<g>
+  <text id="com.techpasya.aujar.genericfieldtest.ClassZ" x="315.00000000000006" y="496.8653347947321" display="none" >
+   <tspan x="315.00000000000006" dy="1.2em" fill="red" font-size="40px">com.techpasya.aujar.genericfieldtest.ClassZ</tspan>
+   <tspan x="315.00000000000006" dy="1.2em" font-size="35px">IMPLEMENTS : classes</tspan>
+   <tspan x="315.00000000000006" dy="1.2em" font-size="35px">EXTENDS : classes</tspan>
+   <tspan x="315.00000000000006" dy="1.2em" font-size="35px">CONTAINS : classes</tspan>
+  </text>
+ </g>  <g>
+    <circle class="com.techpasya.aujar.genericfieldtest.ClassWithGenericField"  cx="244.9999999999999" cy="168.1346652052679" r="70" fill="#74c365" stroke="black" stroke-width="3" />
     <text x="244.9999999999999" y="173.1346652052679" font-size="20" fill="black" text-anchor="middle">ClassWithGenericField</text>
   </g>
-
+<g>
+  <text id="com.techpasya.aujar.genericfieldtest.ClassWithGenericField" x="314.9999999999999" y="133.1346652052679" display="none" >
+   <tspan x="314.9999999999999" dy="1.2em" fill="red" font-size="40px">com.techpasya.aujar.genericfieldtest.ClassWithGenericField</tspan>
+   <tspan x="314.9999999999999" dy="1.2em" font-size="35px">IMPLEMENTS : classes</tspan>
+   <tspan x="314.9999999999999" dy="1.2em" font-size="35px">EXTENDS : classes</tspan>
+   <tspan x="314.9999999999999" dy="1.2em" font-size="35px">CONTAINS : classes</tspan>
+  </text>
+ </g>
 </svg>
